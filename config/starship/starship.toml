@@ -1,0 +1,155 @@
+# Nordic-darker color palette
+#2e3440	user
+#3b4252	dir
+#434c5e	git
+#4c566a	version
+#5e81ac	doc (from dracula color palette)
+#6272a4	time (from dracula color palette)
+
+format = """
+╭╴\
+$time\
+[ // ](fg:#25aac2)\
+$os\
+$username\
+[ // ](fg:#25aac2)\
+$directory\
+[ // ](fg:#25aac2)\
+$git_branch\
+$c\
+$python\
+$elixir\
+$elm\
+$golang\
+$haskell\
+$java\
+$julia\
+$nodejs\
+$nim\
+$rust\
+$scala\
+$cmd_duration
+$character
+"""
+#add_newline = false
+
+[character]
+success_symbol = "╰→"
+error_symbol = "╰→"
+# ╭╴ ╰─
+
+[line_break]
+disabled = false
+
+[username]
+show_always = true
+style_user = "fg:#c0caf5"
+style_root = "bg:#9A348E"
+format = '[$user]($style)'
+disabled = false
+
+[os]
+format = '[$symbol](#c0caf5) '
+disabled = false
+
+[os.symbols]
+Windows = ''
+Arch = 'Λ'
+Ubuntu = ''
+Macos = ''
+Unknown = '?'
+
+[directory]
+style = "fg:#7dcfff"
+format = "[$path]($style)"
+truncation_length = 3
+truncation_symbol = ">"
+
+[directory.substitutions]
+"Documents" = " "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[c]
+symbol = " "
+style = "fg:#c49a5a"
+format = '[ // ](fg:#25aac2)[$symbol ($version)]($style)'
+
+[python]
+symbol = ""
+style = "fg:#698cd6"
+format = '[ // ](fg:#25aac2)[$symbol ($version)]($style)'
+
+[docker_context]
+symbol = " "
+style = "fg:#5e81ac"
+format = '[ // ](fg:#25aac2)[$symbol $context]($style) $path'
+
+[elixir]
+symbol = ""
+style = "fg:#BB9AF7"
+format = '[ // ](fg:#25aac2)[$symbol ($version)]($style)'
+
+[elm]
+symbol = " "
+style = "fg:#"
+format = '[ // ](fg:#25aac2)[$symbol ($version)]($style)'
+
+[git_branch]
+symbol = ""
+style = "fg:#BB9AF7"
+format = '[$symbol $branch]($style)'
+
+[git_status]
+style = "fg:#BB9AF7"
+format = '[$all_status$ahead_behind]($style)'
+
+[golang]
+symbol = ""
+style = "fg:#0da0ba"
+format = '[ // ](fg:#25aac2)[$symbol ($version)]($style)'
+
+[haskell]
+symbol = "λ"
+style = "fg:#db4b4b"
+format = '[ // ](fg:#25aac2)[$symbol ($version)]($style)'
+
+[java]
+symbol = ""
+style = "fg:#963c47"
+format = '[ // ](fg:#25aac2)[$symbol ($version)]($style)'
+
+[julia]
+symbol = ""
+style = "fg:#9a7ecc"
+format = '[ // ](fg:#25aac2)[$symbol ($version)]($style)'
+
+[nodejs]
+symbol = ""
+style = "fg:#1abc9c"
+format = '[ // ](fg:#25aac2)[$symbol ($version)]($style)'
+
+[nim]
+symbol = ""
+style = "fg:#e0af68"
+format = '[ // ](fg:#25aac2)[$symbol ($version)]($style)'
+
+[rust]
+symbol = ""
+style = "fg:#bb616b"
+format = '[ // ](fg:#25aac2)[$symbol ($version)]($style)'
+
+[scala]
+symbol = " "
+style = "fg:#963c47"
+format = '[ // ](fg:#25aac2)[$symbol ($version)]($style)'
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "fg:#1abc9c"
+format = '[$time]($style)'
+[cmd_duration]
+min_time = 500
+format = '[ // ](fg:#25aac2)[⧗ $duration](#1abc9c)'
